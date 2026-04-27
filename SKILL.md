@@ -17,6 +17,8 @@ Output the results in a clear, structured format, like:
 
 If the paper’s text is missing or the reference list is incomplete, ask me to provide the necessary parts before proceeding.
 
+If the list of references to review is more than 5 then provide a summary table. 
+
 Now please review references [X] to [Y] from the paper that follows:
 
 [Paste the paper text here]
