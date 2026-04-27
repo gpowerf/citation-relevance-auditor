@@ -14,3 +14,9 @@ Follow these steps for each reference:
 5. **Provide a short justification** (2–4 sentences) explaining why the reference is or isn’t a good match for the associated in-text claim.
 
 Output the results in a clear, structured format, like:
+
+If the paper’s text is missing or the reference list is incomplete, ask me to provide the necessary parts before proceeding.
+
+Now please review references [X] to [Y] from the paper that follows:
+
+[Paste the paper text here]
