@@ -25,16 +25,25 @@ Everything is **prompt‑based**, **version‑controllable**, and **human‑driv
 
 ## 🧠 The Agent Team
 
-| Agent                | File                   | Role                                                             |
-|----------------------|------------------------|------------------------------------------------------------------|
-| **Strategist**       | `agents/strategist.md` | Generates a full paper outline with `[CLAIM]` statements.        |
-| **Literature Scout** | `agents/literature_scout.md` | Creates search queries and a fill‑in template for found papers. |
-| **Analyst**          | `agents/analyst.md`    | Extracts claims from a paper’s text (or abstract).               |
-| **Claim Verifier**   | `agents/claim_verifier.md` | Your original auditor, now modular – checks one citation at a time. |
-| **Drafter**          | `agents/drafter.md`    | Writes a section using the outline and verified evidence.        |
-| **Reviewer**         | `agents/reviewer.md`   | Applies the `PEERREVIEWER.md` criteria to a draft section.       |
+| Agent                | File (OpenCode)                          | File (standalone)         | Role                                                             |
+|----------------------|------------------------------------------|---------------------------|------------------------------------------------------------------|
+| **Strategist**       | `.opencode/agents/strategist.md`         | `agents/strategist.md`    | Generates a full paper outline with `[CLAIM]` statements.        |
+| **Literature Scout** | `.opencode/agents/literature-scout.md`   | `agents/literature_scout.md` | Creates search queries and a fill‑in template for found papers. |
+| **Analyst**          | `.opencode/agents/analyst.md`            | `agents/analyst.md`       | Extracts claims from a paper's text (or abstract).               |
+| **Claim Verifier**   | `.opencode/agents/claim-verifier.md`     | `agents/claim_verifier.md` | Your original auditor, now modular – checks one citation at a time. |
+| **Drafter**          | `.opencode/agents/drafter.md`            | `agents/drafter.md`       | Writes a section using the outline and verified evidence.        |
+| **Reviewer**         | `.opencode/agents/reviewer.md`           | `agents/reviewer.md`      | Applies the `PEERREVIEWER.md` criteria to a draft section.       |
 
-The original standalone auditor remains available in `SKILL.md` for quick audits, and the peer‑review prompt in `PEERREVIEWER.md` is unchanged.
+The original standalone auditor remains available in `SKILL.md` (`audit` skill in `.opencode/skills/citation-auditor/`) for quick audits, and the peer‑review prompt in `PEERREVIEWER.md` is unchanged.
+
+### OpenCode Integration
+
+This repo doubles as an [OpenCode](https://opencode.ai) project. Open the repo in OpenCode and the agents and skills are automatically loaded:
+
+- Use `@strategist`, `@literature-scout`, `@analyst`, `@claim-verifier`, `@drafter`, `@reviewer` to invoke each agent.
+- The **citation auditor** skill auto-triggers when you mention citation auditing.
+- The **paper workflow** skill guides you through the end-to-end process.
+- Configuration lives in `opencode.json`.
 
 ---
 
