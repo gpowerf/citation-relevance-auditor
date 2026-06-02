@@ -2,7 +2,7 @@
 
 **A modular, Markdown‑native multi‑agent system for independent researchers who want to write rigorous, well‑cited papers with the help of LLMs.**
 
-> Use at your own risk! LLMs allucinate and no ammount of guardrails fully protects you. Work with a team of specialized AI agents—strategist, scout, analyst, drafter, reviewer, and citation auditor—following a transparent, human‑in‑the‑loop process.
+> Use at your own risk! LLMs hallucinate and no amount of guardrails fully protects you. Work with a team of specialized AI agents—strategist, scout, analyst, drafter, reviewer, and citation auditor—following a transparent, human‑in‑the‑loop process.
 
 ---
 
