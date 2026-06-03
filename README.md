@@ -25,7 +25,6 @@ A modular, Markdown-native multi-agent system for independent researchers who wa
 
 ## What is this?
 
-<<<<<<< HEAD
 | Agent                | File (OpenCode)                          | File (standalone)         | Role                                                             |
 |----------------------|------------------------------------------|---------------------------|------------------------------------------------------------------|
 | **Strategist**       | `.opencode/agents/strategist.md`         | `agents/strategist.md`    | Generates a full paper outline with `[CLAIM]` statements.        |
