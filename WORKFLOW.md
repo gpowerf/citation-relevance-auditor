@@ -19,7 +19,7 @@ This workflow uses the agent team to go from a research question to a fully draf
 4. Copy the final outline into the `outline:` section of `evidence_db.md`.
 
 ## Stage 2: Literature Scout – Find Papers
-1. Start a new chat (or clear context). System prompt: `agents/literature_scout.md` and the keywords from the strategist’s output.
+1. Start a new chat (or clear context). System prompt: `agents/literature-scout.md` and the keywords from the strategist’s output.
 2. The LLM gives you search instructions. Execute the searches manually in your browser (arXiv, Semantic Scholar).
 3. For each paper you deem relevant, fill out the YAML template the scout provided. Paste the filled block into the `papers:` section of `evidence_db.md`.
 
@@ -43,7 +43,7 @@ Now use your Claim Verifier to ensure every citation genuinely supports its atta
 1. For each citation `[n]` in the draft:
    - Extract the paragraph containing that citation. Replace the `[n]` with `CITATION_HERE` (so the verifier knows which one to check).
    - Prepare the cited paper details: its title, abstract, and extracted claims (from `evidence_db.md`).
-2. System prompt: `agents/claim_verifier.md`.
+2. System prompt: `agents/claim-verifier.md`.
 3. User message: the paragraph with `CITATION_HERE` and the paper details.
 4. The LLM outputs a rating. If `Not relevant` or `Contradicts`, go back to your evidence database and either find better support, revise the claim, or remove the citation.
 

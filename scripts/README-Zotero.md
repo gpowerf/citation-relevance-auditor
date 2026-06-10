@@ -9,7 +9,7 @@ agent pipeline (evidence_db.md or literature-scout template).
 pip install pyyaml
 ```
 
-For local mode (default, recommended): no additional setup needed.
+For local mode: `pip install pyyaml` (required for YAML output).
 For API mode: `pip install pyzotero` and get an API key from https://www.zotero.org/settings/keys.
 
 ## Usage

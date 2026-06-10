@@ -28,9 +28,9 @@ A modular, Markdown-native multi-agent system for independent researchers who wa
 | Agent                | File (OpenCode)                          | File (standalone)         | Role                                                             |
 |----------------------|------------------------------------------|---------------------------|------------------------------------------------------------------|
 | **Strategist**       | `.opencode/agents/strategist.md`         | `agents/strategist.md`    | Generates a full paper outline with `[CLAIM]` statements.        |
-| **Literature Scout** | `.opencode/agents/literature-scout.md`   | `agents/literature_scout.md` | Creates search queries and a fill‑in template for found papers. |
+| **Literature Scout** | `.opencode/agents/literature-scout.md`   | `agents/literature-scout.md` | Creates search queries and a fill‑in template for found papers. |
 | **Analyst**          | `.opencode/agents/analyst.md`            | `agents/analyst.md`       | Extracts claims from a paper's text (or abstract).               |
-| **Claim Verifier**   | `.opencode/agents/claim-verifier.md`     | `agents/claim_verifier.md` | Your original auditor, now modular – checks one citation at a time. |
+| **Claim Verifier**   | `.opencode/agents/claim-verifier.md`     | `agents/claim-verifier.md` | Your original auditor, now modular – checks one citation at a time. |
 | **Drafter**          | `.opencode/agents/drafter.md`            | `agents/drafter.md`       | Writes a section using the outline and verified evidence.        |
 | **Reviewer**         | `.opencode/agents/reviewer.md`           | `agents/reviewer.md`      | Applies the `PEERREVIEWER.md` criteria to a draft section.       |
 
@@ -44,18 +44,6 @@ This repo doubles as an [OpenCode](https://opencode.ai) project. Open the repo i
 - The **citation auditor** skill auto-triggers when you mention citation auditing.
 - The **paper workflow** skill guides you through the end-to-end process.
 - Configuration lives in `opencode.json`.
-=======
-This repo provides a team of AI agents (each in a Markdown prompt file) that work together to help you write academic papers. The agents are:
-
-- **Strategist** — turns a research question into a paper outline with `[CLAIM]` statements
-- **Literature Scout** — generates search queries and a template for found papers
-- **Analyst** — extracts factual claims from a paper's text/abstract
-- **Drafter** — writes a section using outline + evidence
-- **Claim Verifier** — checks if a specific citation supports its claim
-- **Reviewer** — peer-reviews a draft section
-
-Each agent is a self-contained prompt you paste to an LLM chat. You control every step.
->>>>>>> 65ab0af (Rewrite README with task-based examples and add Zotero fetch script with local SQLite mode)
 
 ---
 
@@ -75,11 +63,12 @@ Each agent is a self-contained prompt you paste to an LLM chat. You control ever
 │   ├── drafter.md           ← writes a section from outline + evidence
 │   ├── claim-verifier.md    ← checks one citation's support
 │   └── reviewer.md          ← peer reviews a draft section
-├── skills/
-│   ├── citation-auditor/
-│   │   └── SKILL.md         ← audits a range of references
-│   └── paper-workflow/
-│       └── SKILL.md         ← orchestrates all 6 agents in sequence
+├── .opencode/
+│   └── skills/
+│       ├── citation-auditor/
+│       │   └── SKILL.md     ← audits a range of references
+│       └── paper-workflow/
+│           └── SKILL.md     ← orchestrates all 6 agents in sequence
 └── scripts/
     ├── zotero_fetch.py      ← fetch references from Zotero
     └── README-Zotero.md     ← Zotero script docs
@@ -126,7 +115,7 @@ Research question: How does the rise of AI coding assistants affect software qua
 The strategist returns an outline with `[CLAIM]` statements. Copy this into the `outline:` field of your `evidence_db.md`.
 
 **Step 2: Find papers**
-Paste `agents/literature-scout.md` as the system prompt with the keywords from step 1. The scout gives you 3–5 search queries. Run them manually on arXiv/Semantic Scholar. Fill out the YAML template for each paper you find. Paste the filled entries into the `papers:` section of `evidence_db.md`.
+Paste `agents/literature-scout.md` as the system prompt with the keywords from step 1. The scout gives you 3–5 search queries. Run them manually on arXiv, Semantic Scholar, or Google Scholar. Fill out the YAML template for each paper you find. Paste the filled entries into the `papers:` section of `evidence_db.md`.
 
 **Step 3: Extract claims from each paper**
 For each paper, paste `agents/analyst.md` as the system prompt. Send the paper's metadata block and text:
@@ -200,7 +189,7 @@ The drafter returns a complete section with citations in `[1]`, `[2]` format and
 
 Use the **citation-auditor skill** when you have a complete draft and want to check a range of references.
 
-Paste the content of `skills/citation-auditor/SKILL.md` as the system prompt, then append:
+Paste the content of `.opencode/skills/citation-auditor/SKILL.md` as the system prompt, then append:
 ```
 Now please review references 3 to 5 from the paper that follows:
 
@@ -293,8 +282,8 @@ See `scripts/README-Zotero.md` for full details.
 
 | Skill | File | When to use |
 |---|---|---|
-| **citation-auditor** | `skills/citation-auditor/SKILL.md` | You have a full draft and want to audit a range of references (e.g., "refs 3–5") |
-| **paper-workflow** | `skills/paper-workflow/SKILL.md` | You want end-to-end orchestration guidance through all 6 agents |
+| **citation-auditor** | `.opencode/skills/citation-auditor/SKILL.md` | You have a full draft and want to audit a range of references (e.g., "refs 3–5") |
+| **paper-workflow** | `.opencode/skills/paper-workflow/SKILL.md` | You want end-to-end orchestration guidance through all 6 agents |
 
 ---
 

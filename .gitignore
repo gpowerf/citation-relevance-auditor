@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.opencode/node_modules/
+.opencode/package.json
+.opencode/package-lock.json
