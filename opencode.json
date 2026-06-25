@@ -1,37 +1,5 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "agent": {
-    "strategist": {
-      "description": "Turns a research question into a detailed paper outline with verifiable [CLAIM] statements.",
-      "mode": "subagent",
-      "permission": { "edit": "deny", "bash": "deny", "read": "allow", "glob": "allow", "grep": "allow" }
-    },
-    "literature-scout": {
-      "description": "Generates precise search queries and a fill-in template for finding academic papers on a topic.",
-      "mode": "subagent",
-      "permission": { "edit": "deny", "bash": "deny", "read": "allow" }
-    },
-    "analyst": {
-      "description": "Extracts every factual claim from an academic paper for use in evidence databases.",
-      "mode": "subagent",
-      "permission": { "edit": "deny", "bash": "deny", "read": "allow" }
-    },
-    "claim-verifier": {
-      "description": "Checks whether a single in-text citation genuinely supports the claim it is attached to.",
-      "mode": "subagent",
-      "permission": { "edit": "deny", "bash": "deny", "read": "allow" }
-    },
-    "drafter": {
-      "description": "Writes paper sections using the outline and verified evidence from the evidence database.",
-      "mode": "subagent",
-      "permission": { "edit": "allow", "bash": "deny", "read": "allow", "glob": "allow", "grep": "allow" }
-    },
-    "reviewer": {
-      "description": "Peer-reviews draft paper sections for logic, flow, evidence support, and writing quality.",
-      "mode": "subagent",
-      "permission": { "edit": "deny", "bash": "deny", "read": "allow" }
-    }
-  },
   "skills": {
     "paths": [".opencode/skills"]
   }

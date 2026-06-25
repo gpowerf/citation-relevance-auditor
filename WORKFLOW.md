@@ -49,7 +49,7 @@ Now use your Claim Verifier to ensure every citation genuinely supports its atta
 
 ## Stage 6: Peer Review (optional but recommended)
 1. After a full section is drafted and audited, run the Reviewer agent.
-2. System prompt: paste the content of `PEERREVIEWER.md` followed by the instruction block from `agents/reviewer.md`.
+2. System prompt: paste the content of `agents/reviewer.md`.
 3. User message: the final draft of the section.
 4. Apply the suggested revisions as you see fit.
 

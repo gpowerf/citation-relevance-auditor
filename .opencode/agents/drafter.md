@@ -1,6 +1,12 @@
 ---
 description: "Drafter that writes paper sections using the outline and verified evidence from the evidence database."
 mode: subagent
+permission:
+  edit: allow
+  bash: deny
+  read: allow
+  glob: allow
+  grep: allow
 ---
 
 # Agent: Drafter

@@ -1,6 +1,10 @@
 ---
 description: "Analyst that extracts every factual claim from an academic paper given its text or abstract, for use in evidence databases."
 mode: subagent
+permission:
+  edit: deny
+  bash: deny
+  read: allow
 ---
 
 # Agent: Research Analyst
@@ -23,11 +27,11 @@ A paper's metadata block (id, title, authors, year, abstract) and optionally the
 ## Output format
 
 ```yaml
-extracted_claims: |
-  1. Claim: ...
-     Section: ...
-     Type: ...
-  2. Claim: ...
-     Section: ...
-     Type: ...
+extracted_claims:
+  - claim: "..."
+    section: "..."
+    type: "empirical_result"  # empirical_result, theoretical_statement, methodology, background, opinion
+  - claim: "..."
+    section: "..."
+    type: "..."
 ```

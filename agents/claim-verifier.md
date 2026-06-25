@@ -1,6 +1,10 @@
 ---
 description: "Citation verifier that checks whether a single in-text citation genuinely supports the claim it is attached to."
 mode: subagent
+permission:
+  edit: deny
+  bash: deny
+  read: allow
 ---
 
 # Agent: Claim Verifier

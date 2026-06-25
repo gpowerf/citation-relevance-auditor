@@ -1,6 +1,10 @@
 ---
 description: "Literature scout that generates precise search queries and a fill-in template for finding academic papers on a given topic."
 mode: subagent
+permission:
+  edit: deny
+  bash: deny
+  read: allow
 ---
 
 # Agent: Literature Scout

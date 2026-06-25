@@ -2,6 +2,8 @@
 
 The file `evidence_db.md` holds the entire project’s knowledge. It must be valid YAML inside a Markdown code block (so it’s both human‑ and machine‑readable).
 
+> ⚠️ **Copyright notice:** This file will contain pasted abstracts and possibly full paper text. Do not commit it to version control or distribute it publicly. It is excluded from git via `.gitignore`.
+
 ```yaml
 # Project Evidence Database
 outline: |
@@ -17,11 +19,13 @@ papers:
     source: "arxiv"  # or "s2"
     why_relevant: "one sentence"
     full_text_available: true/false  # if you copied text from PDF
-    extracted_claims: |
-      1. Claim: ...  
-         Section: ...  
-         Type: ...
-      2. ...
+    extracted_claims:
+      - claim: "..."
+        section: "..."
+        type: "empirical_result"  # empirical_result, theoretical_statement, methodology, background, opinion
+      - claim: "..."
+        section: "..."
+        type: "..."
 
   - id: "another_paper"
     ...

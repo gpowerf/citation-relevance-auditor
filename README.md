@@ -17,7 +17,7 @@ Six specialized LLM agents that work together to produce rigorous, well-cited pa
 | **Analyst** | Extracts factual claims from a paper's text |
 | **Drafter** | Writes a section from an outline + verified evidence |
 | **Claim Verifier** | Checks if a single citation actually supports the claim it's attached to |
-| **Reviewer** | Applies PEERREVIEWER.md criteria to a draft section |
+| **Reviewer** | Applies peer review criteria to a draft section |
 
 **Quick demo** — audit a single citation using a real paper:
 
@@ -56,7 +56,7 @@ Agent: Rating: Highly relevant
 3. **Extract claims** — paste `agents/analyst.md` with each paper's metadata + text
 4. **Draft sections** — paste `agents/drafter.md` with section name + claims + evidence
 5. **Verify citations** — paste `agents/claim-verifier.md` with paragraph + paper details
-6. **Peer review** — paste `agents/reviewer.md` + `PEERREVIEWER.md` with your draft
+6. **Peer review** — paste `agents/reviewer.md` with your draft
 
 Or use the **citation auditor** skill (`SKILL.md`) to audit a range of references at once.
 
@@ -64,7 +64,7 @@ Or use the **citation auditor** skill (`SKILL.md`) to audit a range of reference
 
 ## Requirements
 
-- Any LLM chat (DeepSeek, Claude, GPT-4) with a large context window
+- Any LLM chat (DeepSeek, Claude, GPT-4, or any model via OpenRouter) with a large context window
 - Text editor for `evidence_db.md`
 
 Optional: `pip install pyyaml` (for Zotero integration)
@@ -76,7 +76,6 @@ Optional: `pip install pyyaml` (for Zotero integration)
 ```
 ├── README.md
 ├── SKILL.md                 ← citation-auditor skill (quick audits)
-├── PEERREVIEWER.md          ← peer review rubric
 ├── WORKFLOW.md              ← end-to-end workflow guide
 ├── EVIDENCE_SCHEMA.md       ← evidence_db.md YAML format
 ├── LICENSE

@@ -16,6 +16,7 @@ Follow these steps for each reference:
    - **Highly relevant** – The reference's apparent content directly and credibly supports the cited claim.
    - **Somewhat relevant** – The reference is tangentially related; it might support part of the claim or provide background but not direct evidence.
    - **Not relevant** – The reference appears unrelated, misapplied, or the claim is not supported by a source of this nature.
+   - **Contradicts** – The reference's findings contradict the claim.
 5. **Provide a short justification** (2–4 sentences) explaining why the reference is or isn't a good match for the associated in-text claim.
 
 Output the results in a clear, structured format.

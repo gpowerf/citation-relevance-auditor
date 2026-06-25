@@ -1,6 +1,12 @@
 ---
 description: "Research strategist that turns a research question into a detailed paper outline with verifiable [CLAIM] statements."
 mode: subagent
+permission:
+  edit: deny
+  bash: deny
+  read: allow
+  glob: allow
+  grep: allow
 ---
 
 # Agent: Research Strategist
